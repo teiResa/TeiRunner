@@ -1,0 +1,5 @@
+pallet:
+https://lospec.com/palette-list/seabed-1
+
+tutorial:
+https://blog.logrocket.com/build-a-game-with-html-css-javascript/
