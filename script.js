@@ -1,5 +1,25 @@
 
 function toggleTheme() {
+            // Obtains an array of all <link>
+            // elements.
+            // Select your element using indexing.
+            var theme = document.getElementsByTagName('link')[0];
+
+            // Change the value of href attribute
+            // to change the css sheet.
+            if (theme.getAttribute('href') == 'assets\mine\myStyle.css') {
+                theme.setAttribute('href', 'assets\orig\bare.css');
+            } else {
+                theme.setAttribute('href', 'assets\mine\myStyle.css');
+            }
+        }
+
+
+
+/*  This was for the toggle switch
+
+
+function toggleTheme() {
     // Obtains an array of all <link>
     // elements.
     // Select your element using indexing.
@@ -22,7 +42,7 @@ function toggleTheme() {
 }
 
 
-
+*/
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // ~~~~~~~~~~~~~~~~~~~~  Changed nothing below ~~~~~~~~~~~~~~~~~~~~~~~
 
