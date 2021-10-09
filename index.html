@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title>teiRun (& Jump) Game</title>
 
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets\orig\bare.css">
+    <link rel="stylesheet" href="assets\mine\myStyle.css">
     <link rel="icon" href="assets/teiResaHead.ico">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/press-start-2p" type="text/css"/>
 
@@ -15,12 +18,39 @@
 
     <div id="game">
       <div id="character">
-        <img src="assets\teiResaHead.ico" alt="">
+        <img src="assets\teiresa-8bit-shade-3xl.ico" alt="">
       </div>
       <div id="block">   <!-- was "block" -->
 
       </div>
     </div>
+
+    <div class="extra-controls">
+      <div class="extras-header">
+          <h2>Extras</h2>
+      </div>
+      <hr>
+      <div class="extras-body">
+          <div class="extras" id="one">
+
+          </div>
+          <div class="extras" id="two">
+
+          </div>
+          <div class="extras" id="three">
+            <div class="modes">
+              <div class="checkbox-container"> Bare Version
+                <input type="checkbox" id="toggle" value="style-unstyle" onclick="toggleTheme()" checked />
+                <label for="toggle"></label>
+                <div class="my-version">   </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+    </div>
   </body>
   <script type="text/javascript" src="script.js"></script>
+  <!--script type="text/javascript" src="orig/bare.js"-->
+  </script>
 </html>

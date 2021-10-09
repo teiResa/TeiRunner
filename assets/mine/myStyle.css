@@ -1,0 +1,63 @@
+
+#game {
+  width: 500px;
+  height: 300px;
+  border: 1px dashed black;
+  margin: auto;
+  padding: 30px;
+
+  background-color: #e6bdf0;
+}
+
+/*  ~~~~~~~~~~~~~~~~~~ The character's styling & movement. ~~~~~~~~~~~~~~~~~~~~*/
+
+#character {
+  position: relative;
+  width: 20px;
+  height: 50px;
+  top: 150px;       /* game frame - character's height. */
+  background-color: ;
+
+}
+
+#character img {
+  position: absolute;
+
+  width: 110px;
+
+  top: -20px;
+  left: -30px;
+}
+
+/*
+Jump animation makes the top position slide up 50px then back down.
+Like, imagine a line over your head, like a grad cap.
+*/
+
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+.animate {
+  animation: jump 300ms linear;     /* would ns be better? */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ Block's styling & movement ~~~~~~~~~~~~~~~~~~~~ */
+
+#block {
+  width: 20px;
+  height: 20px;
+  background: blue;
+  position: relative;
+  top: 130px;         /* game height - character height - block height (200 - 50 - 20) */
+  left: 480px;      /* game width - block width (500 - 20) */
+  animati n: block 2s infinite linear;
+}
+
+@keyframes block{
+    0%{left: 500px}
+    100%{left: -20px}
+}
