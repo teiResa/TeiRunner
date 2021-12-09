@@ -62,7 +62,21 @@ Like, imagine a line over your head, like a grad cap.
   position: relative;
   top: 130px;         /* game height - character height - block height (200 - 50 - 20) */
   left: 480px;      /* game width - block width (500 - 20) */
-  animati n: block 2s infinite linear;
+  animation: block 2s infinite linear;
+  animation-delay: 3s;
+}
+#block2 {
+  width: 20px;
+  height: 20px;
+  background: pink;
+  position: relative;
+  top: 130px;         /* game height - character height - block height (200 - 50 - 20) */
+  left: 480px;      /* game width - block width (500 - 20) */
+
+  animation-delay: 1s;
+  animation: block 2s infinite linear;
+  animation-delay:1.5s;
+
 }
 
 @keyframes block{
