@@ -5,16 +5,65 @@ body {
   font-family: 'PressStart2PRegular';
 }
 
+#game-banner {
+/*
+  border: 1px dashed lightgreen;    finishing touches, remove. */
+
+  width: inherit;
+  max-width: inherit;
+  min-width: inherit;
+  height: inherit;
+
+ display: flex;
+ flex-direction: column;
+ position: fixed;
+ z-index: -666;
+}
+
+.scoreboard {
+ display: flex;
+ justify-content: flex-end;
+
+ font-size: small;
+}
+
+#scoreboard-HI-score, #scoreboard-timedistance {
+ padding: 0 20px;
+}
+/*
+#scoreboard-HI-score {
+  color: rgba(0, 0, 0, 0.45); 
+ 
+}
+*/
+
+
+#ALERT-game-over {
+ display: flex;
+ justify-content: center;
+ padding-top: 2%;
+ /* color:rgba(0, 0, 0, 0.619); */
+}
+
+.sneaky{
+ color: lime;
+ /* JS function firstGameOver overrides to make visible on first game over. */
+}
+
+
 
 
 #game {
-  width: 500px;
-  height: 300px;  /* was 200px */
+  width: 55vw;
+  max-width: 1000px;
+  min-width: 800px;
+  height: 190px;  /* was 200px */
   border: 1px dashed black;   /* was solid */
   margin: auto;
   padding: 30px;
+  padding-bottom: 55px;
 
-  background-color: #e6bdf0a0;
+  background-color: #e6bdf03e;
 }
 
 /*  ~~~~~~~~~~~~~~ The character's styling & movement. ~~~~~~~~~~~~~~~~~~*/
@@ -23,7 +72,7 @@ body {
   position: relative;
   width: 20px;
   height: 50px;
-  top: 150px;       /* game frame - character's height. (300-50)*/
+  top: 70px;       /* game frame - character's height. (210-50)*/
   /*background-color: red ;*/
 
 }
@@ -60,32 +109,75 @@ Like, imagine a line over your head, like a grad cap.
   height: 20px;
   background: blue;
   position: relative;
-  top: 130px;         /* game height - character height - block height (200 - 50 - 20) */
+  top: 50px;         /* game height - character height - block height (200 - 50 - 20) */
   left: 480px;      /* game width - block width (500 - 20) */
-
-  animation: block 1s infinite linear;
-  /*
+ /*
+  animation: block 2.1s infinite linear;
+ */
   animation: block 2s infinite linear; 
-  animation-delay: 3s; */
+  animation-delay: 3s; 
 }
 #block2 {
   width: 20px;
   height: 20px;
   background: pink;
   position: relative;
-  top: 130px;         /* game height - character height - block height (200 - 50 - 20) */
+  top: -20 px;         /* game height - character height - block height (200 - 50 - 20) */
   left: 480px;      /* game width - block width (500 - 20) */
 
   animation-delay: 1s;
-  animation: block 2s infinite linear;
+  animation: block 3s infinite linear;
   animation-delay:1.5s;
 
 }
 
 @keyframes block{
-    0%{left: 500px}
-    100%{left: -20px}
+    0%{left: 75vw;}
+    100%{left: -29px}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~ Stuff for "extra-controls" ~~~~~~~~~~~~~~~~~~~~ */
 .extra-controls {

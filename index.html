@@ -15,9 +15,66 @@
   </head>
   <body>
 
+   <!--
+   <style>
+    .sneaky{
+       color: green;
+       /* JS function firstGameOver overrides to make visible on first game over. */
+    }
+   </style>
+
+  -->
+
+   
+
+<script type="text/javascript">
+
+/*
+ const body = document.body;
+
+ const changers = document.getElementsByClassName("onGameOver");
+
+*/
+
+const chango = document.querySelector(".sneaky");
+
+function changeColor() {
+  chango.style.color = "blue";
+}
+
+ //function gameOver() { 
+ 
+  //document.getElementByClassName("onGameOver").setAttribute("style", "visibility: visible");
+ 
+  //document.getElementsByClassName("onGameOver").style.opacity = "0.9";
+
+  //document.getElementById("div1").style.visibility = "visible";
+
+  //document.getElementsByClassName("onGameOver").style.visibility = "visible";
+ 
+ //}
+ 
+ 
+   </script>
+
     <h1>teiRun (and jump) Game</h1>
 
     <div id="game">
+      <div class="game-banner" id="game-banner">
+       <div class="scoreboard">
+        <div id="scoreboard-filler"></div>
+        <div id="scoreboard-HI-score" class="sneaky">
+         HI 00000
+        </div>
+        <div id="scoreboard-timeDistance">
+         <!-- Every second is another point of the score. 00000 format (5 places) -->
+         00000
+        </div>
+       </div>
+       <div id="ALERT-game-over" class="sneaky">
+        <!-- Red boxes are character U+2001 -->
+        G A M E   O V E R</div>
+      </div>
       <div id="character">
         <img src="assets\teiResa_body_82by103.png" alt="" style=" max-width: 65px;">
       </div>
@@ -36,6 +93,8 @@
       
       <div class="extras-body">
           <div class="extras" id="one">
+           <button type="button" id="tester-button" onclick="changeColor()">TESTER BUTTON</button>
+           <button onclick="changeColor('blue')">Change to Blue</button>
 
           </div>
           <div class="extras" id="two">
@@ -57,7 +116,10 @@
       </div>
     </div>
   </body>
-  <script type="text/javascript" src="script.js"></script>
+  
+
+  <!-- Fix JS fix javascript -->
+  <script type="text/javascript" src="scrit.js"></script>
   <!--script type="text/javascript" src="orig/bare.js"-->
   </script>
 </html>

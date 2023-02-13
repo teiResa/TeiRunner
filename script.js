@@ -43,8 +43,6 @@ function toggleTheme() {
 
 
 */
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// ~~~~~~~~~~~~~~~~~~~~  Changed nothing below ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 // JS is used to add the class "animate" to the character on click
@@ -62,6 +60,18 @@ function removeJump(){
     character.classList.remove("animate");
 }
 
+// ~~~~~~~~~~~ Game Over and score stuff
+
+
+function firstGameOver() { 
+ document.getElementByClass("onGameOver").setAttribute("style", "visibility: visible");
+}
+
+
+
+
+
+
 
 // ~~~~~~~~~~~~~~~~~~ Block's movement ~~~~~~~~~~~~~~~~
 
@@ -71,7 +81,25 @@ function checkDead(){
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if(blockLeft<20 && blockLeft>-20 && characterTop>=130){
         alert("Game over!");
+
+
+
+        function showGameOver() {
+
+         
+        }
+
+        function showHiScore() {}
+        
+
     }
 }
 
 setInterval(checkDead, 10);  //checkDead() runs every 10 milliseconds
+
+
+s.sounds = {
+   BUTTON_PRESS: "offline-sound-press",
+   HIT: "offline-sound-hit",
+   SCORE: "offline-sound-reached"
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Test</title>
+</head>
+<body>
+
+ <style>
+   body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+      }
+p {
+   font-size: 2rem;
+}
+
+button {
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.blue {
+    background-color: #3498db;
+}
+
+button.green {
+    background-color: #2ecc71;
+}
+
+button.orange {
+   background-color: orangered;
+}
+ </style>
+ <script>
+
+function changeColor() {
+    name.style.color = "blue";
+}
+
+ </script>
+ <div>
+  <p class="name">freeCodeCamp</p>
+  <button onclick="changeColor()">Change to Blue</button>
+</div>
+</body>
+</html>
