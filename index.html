@@ -29,7 +29,7 @@
 
     <h1>teiRun (and jump) Game</h1>
 
-    <div id="game" onload="loadHide()">
+    <div id="game">
       <div class="game-banner" id="game-banner">
        <div class="scoreboard">
         <div id="scoreboard-filler"></div>
@@ -64,7 +64,8 @@
       <div class="extras-body">
           <div class="extras" id="one">
            <button type="button" id="tester-button" onclick="changeColor()">TESTER BUTTON</button>
-           <button onclick="changeColor('blue')">Change to Blue</button>
+           <button onclick="changeColor('beige')">Change to not Blue</button>
+           <button type="button" id="tester-button" onclick="loadHide()">START GAME</button>
 
           </div>
           <div class="extras" id="two">
@@ -109,8 +110,8 @@ const changoHI = document.querySelector("#scoreboard-HI-score")
  }
 
  function loadHide() {
-  chango.style.color = "pink";
-   changoHI.style.color="pink";
+  chango.style.color = "rgba(0, 0, 0, 0)";
+   changoHI.style.color="rgba(0, 0, 0, 0.45)";
  }
  
   //function gameOver() { 
