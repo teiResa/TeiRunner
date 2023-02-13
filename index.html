@@ -15,7 +15,7 @@
   </head>
   <body>
 
-   
+   <!--
    <style>
     .sneaky{
        color: yellow;
@@ -23,44 +23,13 @@
     }
    </style>
 
-  
+  -->
 
    
 
-<script type="text/javascript">
-
-/*
- const body = document.body;
-
- const changers = document.getElementsByClassName("onGameOver");
-
-*/
-
-const chango = document.querySelector(".sneaky");
-
-function changeColor() {
-  chango.color = "blue";
-  //chango.style.color
-}
-
- //function gameOver() { 
- 
-  //document.getElementByClassName("onGameOver").setAttribute("style", "visibility: visible");
- 
-  //document.getElementsByClassName("onGameOver").style.opacity = "0.9";
-
-  //document.getElementById("div1").style.visibility = "visible";
-
-  //document.getElementsByClassName("onGameOver").style.visibility = "visible";
- 
- //}
- 
- 
-   </script>
-
     <h1>teiRun (and jump) Game</h1>
 
-    <div id="game">
+    <div id="game" onload="loadHide()">
       <div class="game-banner" id="game-banner">
        <div class="scoreboard">
         <div id="scoreboard-filler"></div>
@@ -116,6 +85,49 @@ function changeColor() {
           </div>
       </div>
     </div>
+
+    
+<script type="text/javascript">
+
+ /*
+  const body = document.body;
+ 
+  const changers = document.getElementsByClassName("onGameOver");
+
+  https://bobbyhadz.com/blog/javascript-cannot-read-property-style-of-null
+ 
+ */
+ 
+ const chango = document.querySelector("#ALERT-game-over");
+
+const changoHI = document.querySelector("#scoreboard-HI-score")
+ 
+ function changeColor() {
+   chango.style.color = "rgba(0, 0, 0, 0.65)";
+   changoHI.style.color="rgba(0, 0, 0, 0.45)";
+   //chango.style.color
+ }
+
+ function loadHide() {
+  chango.style.color = "pink";
+   changoHI.style.color="pink";
+ }
+ 
+  //function gameOver() { 
+  
+   //document.getElementByClassName("onGameOver").setAttribute("style", "visibility: visible");
+  
+   //document.getElementsByClassName("onGameOver").style.opacity = "0.9";
+ 
+   //document.getElementById("div1").style.visibility = "visible";
+ 
+   //document.getElementsByClassName("onGameOver").style.visibility = "visible";
+  
+  //}
+  
+  
+    </script>
+ 
   </body>
   
 
