@@ -13,7 +13,7 @@
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/press-start-2p" type="text/css"/>
 
   </head>
-  <body>
+  <body id="body">
 
    <!--
    <style>
@@ -65,7 +65,8 @@
           <div class="extras" id="one">
            <button type="button" id="tester-button" onclick="changeColor()">TESTER BUTTON</button>
            <button onclick="changeColor('beige')">Change to not Blue</button>
-           <button type="button" id="tester-button" onclick="loadHide()">START GAME</button>
+           <button type="button" id="start-button" onclick="loadHide()">START GAME</button>
+           <button id="myBtn" onclick="javascript:alert('Key trigger works')">key test test</button>
 
           </div>
           <div class="extras" id="two">
@@ -113,6 +114,34 @@ const changoHI = document.querySelector("#scoreboard-HI-score")
   chango.style.color = "rgba(0, 0, 0, 0)";
    changoHI.style.color="rgba(0, 0, 0, 0.45)";
  }
+
+ // https://foolishdeveloper.com/how-to-detect-enter-key-press-in-javascript-free-code/
+
+ //  https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+ //  https://www.w3schools.com/jsref/event_key_key.asp
+ //  https://www.w3schools.com/jsref/obj_keyboardevent.asp
+
+//  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_trigger_button_enter
+//  https://foolishdeveloper.com/how-to-detect-enter-key-press-in-javascript-free-code/
+
+ const body = document.querySelector("#body")
+ let key = event.key;
+
+ body.addEventListener("keypress", function(event) {
+  if (event.key === "Space" || event.key === "Enter" || event.key === "ArrowUp" || event.key === "ArrowDown") {
+   event.preventDefault();
+   document.querySelector("#start-button").click();
+  }
+ });
+
+ input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});
+
+ 
  
   //function gameOver() { 
   
