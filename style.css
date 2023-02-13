@@ -9,22 +9,22 @@ body {
 
 #game {
   width: 500px;
-  height: 300px;
-  border: 1px dashed black;
+  height: 300px;  /* was 200px */
+  border: 1px dashed black;   /* was solid */
   margin: auto;
   padding: 30px;
 
-  background-color: #e6bdf0;
+  background-color: #e6bdf0a0;
 }
 
-/*  ~~~~~~~~~~~~~~~~~~ The character's styling & movement. ~~~~~~~~~~~~~~~~~~~~*/
+/*  ~~~~~~~~~~~~~~ The character's styling & movement. ~~~~~~~~~~~~~~~~~~*/
 
 #character {
   position: relative;
   width: 20px;
   height: 50px;
-  top: 150px;       /* game frame - character's height. */
-  background-color: ;
+  top: 150px;       /* game frame - character's height. (300-50)*/
+  /*background-color: red ;*/
 
 }
 
@@ -62,8 +62,11 @@ Like, imagine a line over your head, like a grad cap.
   position: relative;
   top: 130px;         /* game height - character height - block height (200 - 50 - 20) */
   left: 480px;      /* game width - block width (500 - 20) */
-  animation: block 2s infinite linear;
-  animation-delay: 3s;
+
+  animation: block 1s infinite linear;
+  /*
+  animation: block 2s infinite linear; 
+  animation-delay: 3s; */
 }
 #block2 {
   width: 20px;
@@ -101,9 +104,11 @@ Like, imagine a line over your head, like a grad cap.
 
 }
 
+/*
 .extras-header h2 {
 
 }
+*/
 
 .extras-body {
   display: grid;
@@ -125,10 +130,11 @@ Like, imagine a line over your head, like a grad cap.
 
 }
 
-
+/*
 modes {
 
 }
+*/
 
 
 .checkbox-container {

@@ -52,9 +52,9 @@ function toggleTheme() {
 // ~~~~~~~~~~~~~~ Character movement ~~~~~~~~~~~~~~~~~
 
 var character = document.getElementById("character");
-document.addEventListener("click",jump);
+document.addEventListener("click", jump);
 function jump(){
-  if(character.classList == "animate"){return;}       //remove this for double jumps
+  if(character.classList == "animate"){return;}       //remove this for double jumps, but for now it blocks the character from glitching mid-jump.
     character.classList.add("animate");
     setTimeout(removeJump,300);            //300ms = length of animation
 };
@@ -70,8 +70,8 @@ function checkDead(){
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if(blockLeft<20 && blockLeft>-20 && characterTop>=130){
-        alert("Game over");
+        alert("Game over!");
     }
 }
 
-setInterval(checkDead, 10);
+setInterval(checkDead, 10);  //checkDead() runs every 10 milliseconds
