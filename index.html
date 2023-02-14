@@ -12,6 +12,8 @@
     <link rel="icon" href="assets/teiResaHead.ico">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/press-start-2p" type="text/css"/>
 
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
   </head>
   <body id="body">
 
@@ -27,7 +29,7 @@
 
    
 
-    <h1>teiRun (and jump) Game</h1>
+    <h1 id="page-title">teiRun (& jump) Game</h1>
 
     <div id="game">
       <div class="game-banner" id="game-banner">
@@ -68,8 +70,12 @@
            <button type="button" id="start-button" onclick="loadHide()">START GAME</button>
            <button id="myBtn" onclick="javascript:alert('Key trigger works')">key test test</button>
 
+           High Scores? Nah.
+
           </div>
           <div class="extras" id="two">
+
+           Choose a game mode:
 
           </div>
           <div class="extras" id="three">
@@ -105,12 +111,14 @@
 const changoHI = document.querySelector("#scoreboard-HI-score")
  
  function changeColor() {
+  //works, but says the function is void.
    chango.style.color = "rgba(0, 0, 0, 0.65)";
    changoHI.style.color="rgba(0, 0, 0, 0.45)";
    //chango.style.color
  }
 
  function loadHide() {
+  //works, but says the function is void.
   chango.style.color = "rgba(0, 0, 0, 0)";
    changoHI.style.color="rgba(0, 0, 0, 0.45)";
  }
@@ -123,6 +131,11 @@ const changoHI = document.querySelector("#scoreboard-HI-score")
 
 //  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_trigger_button_enter
 //  https://foolishdeveloper.com/how-to-detect-enter-key-press-in-javascript-free-code/
+
+//https://api.jquery.com/keydown/
+//https://www.w3schools.com/js/js_htmldom_document.asp
+//https://dev.to/paulasantamaria/document-your-javascript-code-with-jsdoc-2fbf
+//https://jsdoc.app/#block-tags
 
  const body = document.querySelector("#body")
  let key = event.key;

@@ -5,6 +5,13 @@ body {
   font-family: 'PressStart2PRegular';
 }
 
+#page-title {
+ display: flex;
+ justify-content: center;
+ width: 95vw;
+ max-width: 95%;
+}
+
 #game-banner {
 /*
   border: 1px dashed lightgreen;    finishing touches, remove. */
@@ -61,7 +68,7 @@ body {
 #game {
   width: 55vw;
   max-width: 1000px;
-  min-width: 800px;
+  min-width: 600px;
   height: 190px;  /* was 200px */
   border: 1px dashed black;   /* was solid */
   margin: auto;
